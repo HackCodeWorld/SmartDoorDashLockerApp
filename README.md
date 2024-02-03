@@ -119,6 +119,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ![image](/images/2.png)
 
 ### Showing the UX for DoorDasher / Amazon Driver Adding Temporary Storage Locker Interface
+![image](/images/3.png)
 ![image](/images/1.png)
 
 ### Showing the UX for DoorDasher / Amazon Driver Demonstrating all items list being stored in the locker
