@@ -2,12 +2,107 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.hackcode.locker.mapper.ExpressMapper">
     <!-- 定义 SQL 映射 -->
+    <!-- sql to select express by id -->
     <select id="selectExpressById" resultType="com.hackcode.locker.model.Express">
-        SELECT * FROM express WHERE id = #{id}
+        SELECT *
+        FROM express
+        WHERE id = #{id}
     </select>
-    <!-- 其他 SQL 映射 -->
+    <!-- 根据快递单号查询快递 -->
+    <!-- used express code to select express -->
+    <select id="selectExpressByCode" resultType="com.hackcode.locker.model.Express">
+        SELECT *
+        FROM express
+        WHERE code = #{code}
+    </select>
+    <!-- 根据状态查询快递 -->
+    <!-- use satatus to select express -->
+    <select id="selectExpressByStatus" resultType="com.hackcode.locker.model.Express">
+        SELECT *
+        FROM express
+        WHERE status = #{status}
+    </select>
+    <!-- 根据用户 ID 查询快递 -->
+    <!-- use user id to select express-->
+    <select id="selectExpressByUserIdAndStatus" resultType="com.hackcode.locker.model.Express">
+        SELECT *
+        FROM express
+        WHERE id = #{id}
+          AND status = #{status}
+    </select>
+    <!-- 根据用户 ID 查询快递 -->
+    <!-- use user id to select express-->
+    <select id="selectExpressByUserIdAndCode" resultType="com.hackcode.locker.model.Express">
+        SELECT *
+        FROM express
+        WHERE id = #{id}
+          AND code = #{code}
+    </select>
+
+    <!-- 根据用户 ID 查询快递 -->
+    <select id="selectExpressByUserId" resultType="com.hackcode.locker.model.Express">
+        SELECT *
+        FROM express
+        WHERE id = #{id}
+    </select>
+
+    <!-- 根据用户 ID 查询快递 -->
+    <select id="selectExpressByUserIdAndStatusAndCodeAndId" resultType="com.hackcode.locker.model.Express">
+        SELECT *
+        FROM express
+        WHERE id = #{id}
+          AND status = #{status}
+          AND code = #{code}
+
+    </select>
+    <!-- 根据用户 ID 查询快递 -->
+    <select id="selectExpressByUserIdAndCodeAndId" resultType="com.hackcode.locker.model.Express">
+        SELECT *
+        FROM express
+        WHERE id = #{id}
+          AND code = #{code}
+    </select>
+
+    <!-- 根据用户 ID 查询快递 -->
+    <select id="selectExpressByUserIdAndStatusAndId" resultType="com.hackcode.locker.model.Express">
+        SELECT *
+        FROM express
+        WHERE id = #{id}
+          AND status = #{status}
+    </select>
+    <!-- 根据用户 ID 查询快递 -->
+    <select id="selectExpressByUserIdAndId" resultType="com.hackcode.locker.model.Express">
+        SELECT *
+        FROM express
+        WHERE id = #{id}
+    </select>
+
+    <!-- 插入、更新、删除 SQL 映射 -->
+
+    <!-- 插入快递 -->
+    <insert id="insertExpress" parameterType="com.hackcode.locker.model.Express">
+        INSERT INTO express (id,express_number,company,code)
+        VALUES (#{id},#{expressNumber},#{company},#{code})
+    </insert>
+
+    <!-- 更新快递状态 -->
+    <update id="updateExpressStatusById">
+        UPDATE express
+        SET status = #{status}
+        WHERE id = #{id}
+    </update>
+
+    <!-- 删除快递 -->
+    <delete id="deleteExpress">
+        DELETE
+        FROM express
+        WHERE id = #{id}
+    </delete>
+
+    <!-- 查询所有快递 -->
     <select id="selectAllExpresses" resultType="com.hackcode.locker.model.Express">
-        SELECT * FROM express
+        SELECT *
+        FROM express
     </select>
 
 </mapper>
