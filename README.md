@@ -154,7 +154,7 @@ cd SmartDoorDashLocker
 ## Set up the backend
 Navigate to the backend(src/main/java) directory, build and run the Spring Boot application.
 
-## Set up the backend
+## Set up the frontend
 Navigate to the frontend directory, install dependencies, and start the React app.
 ```bash
 cd ../frontend
