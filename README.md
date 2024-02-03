@@ -115,8 +115,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
-### Showing the UX for DoorDasher / Amazon Driver Adding Temporary Storage Locker Interface
+### UX Design for Courier Interface
 ![image](/images/2.png)
+
+### Showing the UX for DoorDasher / Amazon Driver Adding Temporary Storage Locker Interface
 ![image](/images/1.png)
 
 ### Showing the UX for DoorDasher / Amazon Driver Demonstrating all items list being stored in the locker
